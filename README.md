@@ -23,3 +23,6 @@ Esta practica consta de una página web con:
 - Tabla centrada en la página.
 - Campos de entrada (inputs) para el ID y el nombre.
 - Botón con efecto.
+
+## Link
+- https://tomasllera.github.io/Web-Desing-Practice/
