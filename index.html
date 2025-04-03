@@ -1,38 +1,46 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Diseño Web</title>
     <style>
         body {
-            background-color: #f0f8ff; /* Azul pastel suave */
+            background-color: #f0f8ff;
+            /* Azul pastel suave */
             font-family: Arial, sans-serif;
-            color: #333; /* Texto en gris oscuro */
+            color: #333;
+            /* Texto en gris oscuro */
         }
 
         table {
             margin: auto;
             border-collapse: collapse;
-            border: 2px solid #4682B4; /* Azul acero */
-            background-color: #ecf0f1; /* Gris claro */
+            border: 2px solid #4682B4;
+            /* Azul acero */
+            background-color: #ecf0f1;
+            /* Gris claro */
         }
 
-        th, td {
+        th,
+        td {
             text-align: center;
             padding: 10px;
             border: 1px solid #4682B4;
         }
 
         th {
-            background-color: #2c3e50; /* Gris oscuro */
+            background-color: #2c3e50;
+            /* Gris oscuro */
             color: white;
         }
 
         tfoot input {
             width: 95%;
             padding: 5px;
-            background-color: #dcdde1; /* Gris suave */
+            background-color: #dcdde1;
+            /* Gris suave */
             border: 1px solid #7f8c8d;
             color: #333;
         }
@@ -40,7 +48,8 @@
         button {
             width: 200px;
             padding: 10px;
-            background-color: #3498db; /* Azul moderno */
+            background-color: #3498db;
+            /* Azul moderno */
             color: white;
             border: none;
             font-size: 16px;
@@ -50,7 +59,8 @@
         }
 
         button:hover {
-            background-color: #2980b9; /* Azul más oscuro al pasar el mouse */
+            background-color: #2980b9;
+            /* Azul más oscuro al pasar el mouse */
         }
 
         div {
@@ -59,6 +69,7 @@
         }
     </style>
 </head>
+
 <body>
 
     <h1 style="text-align: center; font-size: 48px;">Diseño Web</h1>
@@ -70,7 +81,7 @@
                 <th>ID</th>
                 <th>Nombre</th>
             </tr>
-        </thead>  
+        </thead>
         <tbody>
             <tr>
                 <td>1</td>
@@ -89,10 +100,36 @@
         </tfoot>
     </table>
     
-
     <div>
-        <button>ADD</button>
+        <button onclick="add">ADD</button>
     </div>
 
+    <script>
+        window.onload = () => {     //Objeto y atributo de la venta = Funcion anonima
+            document.getElementsByTagName('input')[0].focus() //Elementos por nombre de la etiqueta (segun input)
+        }
+        function add() {
+
+            var tbody = document.getElementsByTagName('tfoot')[0] //Variable donde tomo la tabla html
+            var row = table.insertRow() //Funcion para agregar una fila en la tabla
+            var cell = row.insertCell() //Funcion para agregar una celda en la fila
+            
+            cell.innerHTML = document.getElementsByTagName('input')[0]
+            var cell = row.insertCell()
+
+            cell.innerHTML = document.getElementsByTagName('input')[1]
+            var cell = row.insertCell() //Funcion para agregar una celda en la fila
+
+            clear() 
+        }
+
+        function clear() {
+            document.getElementsByTagName('input')[0].value = ''
+            document.getElementsByTagName('input')[1].value = ''
+            document.getElementsByTagName('input')[0].focus()
+        }
+    </script>
+
 </body>
+
 </html>
