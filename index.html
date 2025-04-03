@@ -101,7 +101,7 @@
     </table>
     
     <div>
-        <button onclick="add">ADD</button>
+        <button onclick="add()">ADD</button>
     </div>
 
     <script>
@@ -110,14 +110,14 @@
         }
         function add() {
 
-            var tbody = document.getElementsByTagName('tfoot')[0] //Variable donde tomo la tabla html
-            var row = table.insertRow() //Funcion para agregar una fila en la tabla
+            var tbody = document.getElementsByTagName('tbody')[0] //Variable donde tomo la tabla html
+            var row = tbody.insertRow() //Funcion para agregar una fila en la tabla
             var cell = row.insertCell() //Funcion para agregar una celda en la fila
             
-            cell.innerHTML = document.getElementsByTagName('input')[0]
+            cell.innerHTML = document.getElementsByTagName('input')[0].value
             var cell = row.insertCell()
 
-            cell.innerHTML = document.getElementsByTagName('input')[1]
+            cell.innerHTML = document.getElementsByTagName('input')[1].value
             var cell = row.insertCell() //Funcion para agregar una celda en la fila
 
             clear() 
